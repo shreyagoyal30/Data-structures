@@ -13,14 +13,14 @@ public:
         // sort(time.begin(),time.end());
         long long l=0,h=1e14;
       long long  res=h;
-     while(l<=h){
+     while(l<h){
        long long mid=l+(h-l)/2;
        // if(counttrips(mid,time)==totalTrips) return mid;
        if(counttrips(mid,time)>=totalTrips)
        {
           // cout<<res<<endl;
          res=mid;
-         h=mid-1;
+         h=mid;
        }
        else l=mid+1;
      }
